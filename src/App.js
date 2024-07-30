@@ -9,6 +9,7 @@ import Login from './Authentication/Login';
 import UseState from './Hook/UseState';
 import Form from './Components/Form';
 import Mapping from './Navbar/Concepts/Mapping/Mapping';
+import PropsComponent1 from './Navbar/Concepts/props/PropsComponent1';
 
 const App = () => {
   return (
@@ -26,7 +27,15 @@ const App = () => {
 
         <Route path="/login" element={ <Login/> }/>
         <Route path="/form" element={<Form/>}/>
+
+        {/* 29/07/2024 */}
         <Route path='/mapping' element={<Mapping/>}/>
+
+
+        {/* 30/07/2024 --props */}
+        <Route path='/props' element={<PropsComponent1/>}/>
+
+
         
         
       </Routes>
