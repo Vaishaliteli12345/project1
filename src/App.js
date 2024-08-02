@@ -10,6 +10,9 @@ import UseState from './Hook/UseState';
 import Form from './Components/Form';
 import Mapping from './Navbar/Concepts/Mapping/Mapping';
 import PropsComponent1 from './Navbar/Concepts/props/PropsComponent1';
+import CreateData from './CRUD/CreateData';
+import CRUD_Home from './CRUD/Home';
+import EditData from './CRUD/Edit';
 
 const App = () => {
   return (
@@ -34,6 +37,13 @@ const App = () => {
 
         {/* 30/07/2024 --props */}
         <Route path='/props' element={<PropsComponent1/>}/>
+
+        {/* CRUD 01/08/2024 */}
+        <Route path='/get-data' element={<CRUD_Home/>}/>
+        <Route path='/post-data' element={<CreateData/>}/>
+        <Route path='/edit/:id' element={<EditData/>}/>
+        
+
 
 
         
