@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const EditData = () => {
     const navigate = useNavigate();
-    const { id } = useParams(); // Call useParams as a function to extract id
+    const { id } = useParams(); 
 
     const [user, setUser] = useState({
         name: "",
@@ -20,10 +20,10 @@ const EditData = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
        
-            // Use the correct endpoint for PUT request with id
+           
             await axios.put(`http://localhost:4444/user/${id}`, user);
             alert("Data Submitted Successfully.");
-            navigate("/get-data"); // Navigate to another route after successful submission
+            navigate("/get-data"); 
       
            
         
@@ -37,8 +37,6 @@ const EditData = () => {
         
             const result = await axios.get(`http://localhost:4444/user/${id}`);
             setUser(result.data);
-       
-        
     };
 
     return (
